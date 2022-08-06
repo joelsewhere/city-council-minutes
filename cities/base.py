@@ -29,12 +29,11 @@ class BaseConverter:
 
     def convert(self, file):
         pages = self.get_pages(file)
-        scrubbed = self.scrub_pages(pages)
-        text = self.get_text(scrubbed)
-        return text
+        data = self.get_file_data(pages)
+        return data
 
-    def get_text(self, file):
-        return file
+    def get_file_data(self, files):
+        return files
 
     def scrub_pages(self, file):
         return file
